@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>
+    Responsive Nav Bar Creation
+  </title>
+  <style>
+    .navbar-inner-content{
+      background-color: rgb(100, 4, 4);
+      display: flex; 
+      align-items:center;
+      width: 100%;
+      padding: 10px;
+      position: fixed;
+      top:0;
+      margin-left: -10px;
+      cursor: pointer;
+      z-index: 100;
+    }
+    .logo{
+      font-size: 25px;
+      color: rgb(237, 194, 83);
+      margin-left: 10px; 
+      
+    }
+    .logo-image{
+      height:30px ;
+      width: 30px;
+      margin-left:10px ;
+      margin-top: 2px;
+      margin-bottom: -6px;
+    
+      
+    }
+    .content{
+      margin-left: 450px;
+      display: block;
+      
+        }
+    .menu-content{
+      color: white;
+     margin: 20px;
+     text-decoration: none;
+    }
+    .menu-content:hover{
+      transition: 0.2s;
+      color:rgb(237, 194, 83);
+      text-shadow: 0 0 1px white;
+      text-decoration: underline;
+    }
+    
+    .ham-menu{
+     height: 25px;
+     margin-left: 30px;
+         }
+
+         .search{
+          margin-left: 30px;
+          border: 1px black;
+          border-radius: 10px;
+          width: 130px;
+          display: block;
+
+         }
+       
+
+    @media(max-width:600px){
+      .navbar-inner-content{
+        background-color: rgb(4, 11, 60);
+       display: inline-block;
+        height: 40px;
+        width: 600px;
+        margin-top: 0;
+       
+      }
+        .ham-menu{
+    display: block;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: -190px;
+      }
+      .logo{
+        margin: 0 auto;
+      }
+      .content{
+      display: none;
+    }
+    .search{
+      margin-top: -20px;
+      margin-left: 360px;
+    }
+
+    }
+    @media( min-width: 601px) and (max-width: 1024px)
+  {
+    .navbar-inner-content{
+      height: 30px;
+      width: 1024px;
+    }
+    .content{
+      display: none;
+    }
+    .ham-menu{
+      display: none;
+      
+    }
+    .logo{
+     margin: 0 auto;
+    }
+    .search{
+      margin-right: 50px;
+      
+      border-radius: 25px;
+    }
+  }
+  
+    
+  </style>
+</head>
+<body>
+  <div class="navbar-inner-content">
+    <div class="logo">
+      Rutuja Beauty Salon
+      <img src="./woman-with-long-hair.png" class="logo-image" alt="salon logo">
+    </div>
+    <div class="content">
+  <a href="#"class="menu-content">
+    Home 
+  </a>
+  <a href="#" class="menu-content">
+    About us 
+  </a>
+  <a href="#" class="menu-content">
+    Book an appointment 
+  </a>
+  <a href="#" class="menu-content">
+    Gallery
+  </a>
+  <a href="#" class="menu-content">
+    Contact us
+  </a>
+</div>
+  
+  <input type="text" placeholder="search" class="search">
+  <img src="./more.png" alt="hamburger menu" class="ham-menu">
+</div>
+</body>
